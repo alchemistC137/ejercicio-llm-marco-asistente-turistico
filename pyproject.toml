@@ -1,0 +1,32 @@
+[project]
+name = "asistente-turistico"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "alchemistC137", email = "marcomemba@outlook.es" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "faiss-cpu>=1.15.1",
+    "google-generativeai>=0.8.6",
+    "langchain>=1.4.6",
+    "langchain-community>=0.4.2",
+    "langchain-google-genai>=4.4.2",
+    "langchain-text-splitters>=1.1.3",
+    "pydantic>=2.14.1",
+    "pypdf>=6.21.1",
+    "python-dotenv>=1.2.4",
+    "streamlit>=1.66.0",
+]
+
+[tool.uv]
+package = false
+python-preference = "managed"
+
+[project.scripts]
+asistente-turistico = "asistente_turistico:main"
+
+[build-system]
+requires = ["uv_build>=0.13.1,<0.14.0"]
+build-backend = "uv_build"
